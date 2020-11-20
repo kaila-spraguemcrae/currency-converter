@@ -39,8 +39,8 @@ Go to my GitHub repository here, [https://guthub.com/kaila.spraguemcrae/currency
 
 | Test | Input | Output |
 | :------------- | :------------- | :------------- |
-| **ExchangeRate**|||
-| Should successfully create an API call to ExchangeRateAPI | "url" | ".json" |
+| **ConvertCurrency()**|||
+| Should convert inputted USD currency into selected currency| 10 USD | 1038.10 JPY |
 
 </details>
 
