@@ -9,7 +9,7 @@ describe( 'convert', () => {
   });
   
   test('Should convert any currency into another currency', () => {
-    let JPY = 103.9219;
+    let JPY = 10.9219;
     let EUR = 0.8440;
     expect(convert(1000, JPY, EUR)).toEqual(8.12);
   });
