@@ -13,5 +13,4 @@ describe( 'ConvertCurrency', () => {
   test('Should convert inputted USD currency into selected currency', () => {
     expect(newCurrency.newRate).toEqual(1039.22);
   });
- 
 });

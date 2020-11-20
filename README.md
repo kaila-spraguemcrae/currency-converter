@@ -40,7 +40,7 @@ Go to my GitHub repository here, [https://guthub.com/kaila.spraguemcrae/currency
 | Test | Input | Output |
 | :------------- | :------------- | :------------- |
 | **ConvertCurrency()**|||
-| Should convert inputted USD currency into selected currency| 10 USD | 1038.10 JPY |
+| Should convert inputted USD currency into selected currency| 10 USD | 1039.22 JPY |
 
 </details>
 
