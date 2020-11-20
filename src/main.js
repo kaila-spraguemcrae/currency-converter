@@ -2,23 +2,24 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import ConvertCurrency from './js/currency-conversion.js'; 
-import ExchangeRate from './js/call-exchange-rate.js'
+import convert from './js/currency-conversion.js'; 
+import ExchangeRate from './js/call-exchange-rate.js';
 
-function getElements(response) {
+function getElements(response, inputtedAmount, inputtedCurrency) {
+  let conversionRate = response.conversion_rates[inputtedCurrency];
+  let newAmount = convert(inputtedAmount,conversionRate);
+  console.log(conversionRate);
   if (response.conversion_rates){
-    newCurrency.convert();
-    let newAmount = newCurrency.newRate 
-    $('#results').html(`Currency converted:${newAmount}`)
-    //response.conversion_rates.JPY => 103.9219
+    $('#results').html(`Currency converted:${newAmount}`);
+    console.log(newAmount);
   } else {
-    $('#erros').html(`There was an error:${response.message}`);
+    $('#errors').html(`There was an error:${response.message}`);
   }
 }
 
-async function makeApiCall() {
+async function makeApiCall(inputtedAmount,inputtedCurrency) {
   const response = await ExchangeRate.getExchangeRate();
-  getElements(response);
+  getElements(response, inputtedAmount, inputtedCurrency);
 }
 
 $(document).ready(function() {
@@ -27,11 +28,8 @@ $(document).ready(function() {
 
     const inputtedAmount = parseInt($('#amount').val());
     const inputtedCurrency = $('#end-currency').val();
-    
 
-    let newCurrency = new ConvertCurrency(inputtedAmount,inputtedCurrency)
-
-    makeApiCall();
+    makeApiCall(inputtedAmount, inputtedCurrency);
   });
 
 });
