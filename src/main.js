@@ -7,7 +7,10 @@ import ExchangeRate from './js/call-exchange-rate.js'
 
 getElements(response) {
   if (response.conversion_rates){
+    $('#results').html(`Currency converted:${}`)
     //response.conversion_rates.JPY => 103.9219
+  } else {
+    $('#erros').html(`There was an error:${response.message}`);
   }
 }
 
@@ -17,5 +20,10 @@ async function makeApiCall() {
 }
 
 $(document).ready(function() {
+  $('#user-input').submit(function(event){
+    event.preventDefault();
+    let amount = parseInt($('#amount').val());
+    makeApiCall();
+  });
 
 });

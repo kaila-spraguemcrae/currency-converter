@@ -7,7 +7,22 @@
 <body>
   <div class="container">
   <form id="user-input">
+    <div class="form-group">
+      <label for="amount">Amount</label>
+      <input id="amount" class="form-control" type="text">
+      <label for="end-currency">Choose a Currency:</label>
+      <select id="end-currency" name="currency">
+        <option value="CAD">CAD</option>
+        <option value="CNY">CNY</option>
+        <option value="EUR">EUR</option>
+        <option value="JPY">JPY</option>
+        <option value="NOK">NOK</option>
+      </select>
+      <button type="submit" id="button" class="btn-dark">Convert Currency</button>
+    </div>
   </form>
+  <div is="results"></div>
+  <div id="errors"></div>
   </div><!--container-->
 </body>
 </html>
