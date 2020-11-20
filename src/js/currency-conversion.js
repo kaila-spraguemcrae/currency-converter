@@ -1,11 +1,3 @@
-export default class ConvertCurrency {
-  constructor (usd, rate) {
-    this.usd = usd;
-    this.rate = rate;
-    this.newRate = 0;
+export default function convert(amount, rate) {
+    return Math.round((amount * rate)*100)/100
   }
-  
-  convert() {
-    return this.newRate = Math.round((this.usd * this.rate)*100)/100
-  }
-}

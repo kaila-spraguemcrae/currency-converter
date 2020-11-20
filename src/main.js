@@ -5,9 +5,11 @@ import './css/styles.css';
 import ConvertCurrency from './js/currency-conversion.js'; 
 import ExchangeRate from './js/call-exchange-rate.js'
 
-getElements(response) {
+function getElements(response) {
   if (response.conversion_rates){
-    $('#results').html(`Currency converted:${}`)
+    newCurrency.convert();
+    let newAmount = newCurrency.newRate 
+    $('#results').html(`Currency converted:${newAmount}`)
     //response.conversion_rates.JPY => 103.9219
   } else {
     $('#erros').html(`There was an error:${response.message}`);
@@ -22,7 +24,13 @@ async function makeApiCall() {
 $(document).ready(function() {
   $('#user-input').submit(function(event){
     event.preventDefault();
-    let amount = parseInt($('#amount').val());
+
+    const inputtedAmount = parseInt($('#amount').val());
+    const inputtedCurrency = $('#end-currency').val();
+    
+
+    let newCurrency = new ConvertCurrency(inputtedAmount,inputtedCurrency)
+
     makeApiCall();
   });
 

@@ -1,16 +1,17 @@
-import ConvertCurrency from './../src/js/currency-conversion.js'
+import convert from './../src/js/currency-conversion.js'
 
-describe( 'ConvertCurrency', () => {
+describe( 'convert', () => {
 
-  let newCurrency;
 
-  beforeEach(() => {
-    let JPY = 103.9219;
-    newCurrency = new ConvertCurrency(10,JPY);
-    newCurrency.convert();
-  });
+
+  // beforeEach(() => {
+  //   let JPY = 103.9219;
+  //   newCurrency = new ConvertCurrency(10,JPY);
+  //   newCurrency.convert();
+  // });
 
   test('Should convert inputted USD currency into selected currency', () => {
-    expect(newCurrency.newRate).toEqual(1039.22);
+    let JPY = 103.9219;
+    expect(convert(10,JPY)).toEqual(1079.22);
   });
 });
