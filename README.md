@@ -41,6 +41,7 @@ Go to my GitHub repository here, [https://guthub.com/kaila.spraguemcrae/currency
 | :------------- | :------------- | :------------- |
 | **ConvertCurrency()**|||
 | Should convert inputted USD currency into selected currency| 10 USD | 1039.22 JPY |
+| Should convert any currency into another currency|1000 JPY | 8.12 EUR |
 
 </details>
 

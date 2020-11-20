@@ -6,4 +6,5 @@ describe( 'convert', () => {
     let JPY = 103.9219;
     expect(convert(10,JPY)).toEqual(1039.22);
   });
+  
 });

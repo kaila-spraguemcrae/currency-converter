@@ -30,12 +30,12 @@ $(document).ready(function() {
     const inputtedCurrency = $('#end-currency').val();
 
     if (!inputtedAmount > 0) {
-      alert("Please enter a number greater than 0")
+      alert("Please enter a number greater than 0");
     } else if (inputtedCurrency == "") {
-      alert("Please select a currency") 
+      alert("Please select a currency");
     } else {
-    makeApiCall(inputtedAmount, inputtedCurrency);
-  }
+      makeApiCall(inputtedAmount, inputtedCurrency);
+    }
   });
 
 });
