@@ -1,32 +1,52 @@
-# {Application Name}
+# Currency Converter
 
-#### {Brief description of applicaton}, {Date of current version}
+#### This application will convert USD into other currencies using ExchangeRate API, 11.20.2020
 
-#### By _**{List of contributors}**_
+#### By _**Kaila Sprague McRae**_
 
 ## 🚩 Description
 
-{Detailed description, its purpose and usage. What does it does and other information.}
+This application is created for week 6 at Epicodus. It is designed to allow a user to convert USD into another currency using ExchangeRate API. 
 
 ## 🔧 Setup/Installation Requirements
 
-### View Online
+### Necessary Specifications
 
-_To view my live website, {Name of Page}, visit_[https://kaila-spraguemcrae.github.io/FINISH-URL](https://kaila-spraguemcrae.github.io/FINISH-URL)
+- To run this project locally you will need to have node. You can check if you have node by running `node -v` in the command line. If you do not have node please find more information and download [here](https://nodejs.org/en/download/)
+
+- You will also need to have an ExchangeRate API Key. To get this you will need to request a Key [here](https://www.exchangerate-api.com/).
 
 ### Open Locally
 
-Go to my GitHub repository here, [https://guthub.com/kaila.spraguemcrae/FINISH-URL](https://guthub.com/kaila.spraguemcrae/FINISH-URL), and click on the green 'Code' button to clone the repository, Open with GitHub Desktop OR Download the ZIP file
+Go to my GitHub repository here, [https://guthub.com/kaila.spraguemcrae/currency-converter](https://guthub.com/kaila.spraguemcrae/currency-converter), and click on the green 'Code' button to clone the repository, Open with GitHub Desktop OR Download the ZIP file
 
 ##### To clone:
 1. Push the green 'Clone' button and copy the URL.
-2. Open Terminal or GitBash and input the command: `git clone https://github.com/kaila-spraguemcrae/FINISH-URL`
+2. Open Terminal or GitBash and input the command: `git clone https://github.com/kaila-spraguemcrae/currency-converter`
 3. To view the code, open the copied directory with Visual Studio Code or your preferred text editor by inputing the command `code .` in your terminal.
 4. To view the website, open index.html in Chrome or your preferred browser.
 
-Run `npm install` in terminal to gain access to webpack
+### Running a functioning environment:
+
+1. Run `npm install` in terminal to gain access to webpack.
+2. Create a `.env` file in the root directory.
+3. Save your API key in the `.env` by inputting `API_KEY= {Your API Key}`.
+4. Input `npm run start` to view the live server for the application.
+
+## Specs
+
+<details>
+
+| Test | Input | Output |
+| :------------- | :------------- | :------------- |
+| **ExchangeRate**|||
+| Should successfully create an API call to ExchangeRateAPI | "url" | ".json" |
+
+</details>
 
 ## 🐛 Known Bugs
+
+11.20.2020: No known bugs at this time
 
 ## 📫 Support and contact details
 
@@ -36,12 +56,12 @@ If you run into any problems or have any questions please contact me via [email]
 
 This project uses the following technologies:
 
-- HTML
+- ExchangeRate-API
 - JavaScript
 - JQuery
-- CSS
 - Bootstrap
-- GitHub
+- Webpack
+- npm
 
 ## 📘 License
 
