@@ -39,6 +39,10 @@ $(document).ready(function() {
       alert("Please select a currency");
     } else {
       makeApiCall(inputtedStart, inputtedAmount, inputtedEnd);
+      $('.photos').show();
+      $('.photo-start').html(`"<img src=./assets/images/${inputtedStart}.jpg>"`);
     }
+
+
   });
 });

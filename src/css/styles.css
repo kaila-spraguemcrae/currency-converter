@@ -2,6 +2,10 @@ body {
 
 }
 
+.photos {
+  display:none;
+}
+
 .card {
   padding: 10px;
 }
