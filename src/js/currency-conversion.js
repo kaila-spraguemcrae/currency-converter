@@ -1,3 +1,3 @@
-export default function convert(amount, rate) {
-  return Math.round((amount * rate)*100)/100;
+export default function convert(amount, start, end) {
+  return Math.round(((amount / start)*end)*100)/100;
 }
