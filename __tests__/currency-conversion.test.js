@@ -4,7 +4,7 @@ describe( 'convert', () => {
 
   test('Should convert inputted USD currency into selected currency', () => {
     let USD = 1
-    let JPY = 10.9219;
+    let JPY = 103.9219;
     expect(convert(10, USD, JPY)).toEqual(1039.22);
   });
   
