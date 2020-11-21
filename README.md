@@ -1,12 +1,14 @@
 # Currency Converter
 
-#### This application will convert USD into other currencies using ExchangeRate API, 11.20.2020
+#### This application converts currency into other currencies using ExchangeRate API, 11.20.2020
 
 #### By _**Kaila Sprague McRae**_
 
 ## 🚩 Description
 
-This application is created for week 6 at Epicodus. It is designed to allow a user to convert USD into another currency using ExchangeRate API. 
+This application is designed to allow a user to convert a selected currency into another selected currency using ExchangeRate API. Thi was is created for week 6 at Epicodus.
+
+![screenshot of webpage](./src/assets/images/currency-converter.png "currency converter webpage")
 
 ## 🔧 Setup/Installation Requirements
 
@@ -26,7 +28,7 @@ Go to my GitHub repository here, [https://guthub.com/kaila.spraguemcrae/currency
 3. To view the code, open the copied directory with Visual Studio Code or your preferred text editor by inputing the command `code .` in your terminal.
 4. To view the website, open index.html in Chrome or your preferred browser.
 
-### Running a functioning environment:
+### Starting a functioning environment:
 
 1. Run `npm install` in terminal to gain access to webpack.
 2. Create a `.env` file in the root directory.
@@ -39,7 +41,7 @@ Go to my GitHub repository here, [https://guthub.com/kaila.spraguemcrae/currency
 
 | Test | Input | Output |
 | :------------- | :------------- | :------------- |
-| **ConvertCurrency()**|||
+| **convert()**|||
 | Should convert inputted USD currency into selected currency| 10 USD | 1039.22 JPY |
 | Should convert any currency into another currency|1000 JPY | 8.12 EUR |
 

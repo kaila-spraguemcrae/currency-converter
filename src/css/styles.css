@@ -1,10 +1,22 @@
 body {
   font-family: 'Raleway', sans-serif;
-  background-color: rgb(70, 70, 106);
+  color: white;
+  background-color: rgb(56, 56, 63);
+}
+
+.container {
+  max-width: 970px;
+  padding: 100px;
+  background-color: rgba(46, 46, 46, 0.502);
+  border-radius: 10px;
+}
+.container-fluid {
+  margin-top: 20px;
+  margin-left: 22px;
 }
 
 .jumbotron {
-  background-color: rgb(125, 165, 225);
+  background-color: rgb(119, 167, 238);
 }
 
 .jumbotron h1 {
@@ -12,15 +24,14 @@ body {
   text-align: right;
 }
 
-.photos {
-  display:none;
-}
-
 .card {
+  margin: 10px;
   padding: 10px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(32, 32, 32, 0.568);
 }
-
+#amount.form-control {
+  margin-bottom: 30px;
+}
 .button {
   margin: 10px;
   margin-top: 90px;
@@ -31,14 +42,22 @@ label {
 }
 
 .results {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+.results p {
+  margin-top: 5px;
+}
+
+.results .result-placeholder {
+  display: inline;
+  color: gray;
 }
 
 .results .card{
-  height: 40px;
+  height: 37px;
+  background-color: white;
+  color: black;
+  padding-bottom: 10px;
 }
 
-.row{
-  margin-left: 5%;
-}

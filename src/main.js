@@ -12,7 +12,7 @@ function getElements(response, inputtedStart, inputtedAmount, inputtedEnd) {
     let newAmount = convert(conversionRateStart, inputtedAmount,conversionRateEnd);
     console.log(conversionRateEnd);
     console.log(conversionRateStart);
-    $('#results').html(`Currency converted: ${newAmount}`);
+    $('#results').html(`${newAmount}`);
     console.log(newAmount);
   } else {
     $('#errors').html(`There was an error: ${response.message}`);
@@ -38,12 +38,8 @@ $(document).ready(function() {
     } else if (inputtedEnd == "" || inputtedStart == "") {
       alert("Please select starting and ending currencies");
     } else {
-      // $('.photos').show();
-      // $('.photo-start').html(`<img src="/assets/images/ ${inputtedStart} .jpg">`);
-      makeApiCall(inputtedStart, inputtedAmount, inputtedEnd);
-      
+      $('.result-placeholder').hide();
+      makeApiCall(inputtedStart, inputtedAmount, inputtedEnd); 
     }
-
-
   });
 });
