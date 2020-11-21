@@ -35,12 +35,13 @@ $(document).ready(function() {
 
     if (!inputtedAmount > 0) {
       alert("Please enter a number greater than 0");
-    } else if (inputtedEnd == "") {
-      alert("Please select a currency");
+    } else if (inputtedEnd == "" || inputtedStart == "") {
+      alert("Please select starting and ending currencies");
     } else {
+      // $('.photos').show();
+      // $('.photo-start').html(`<img src="/assets/images/ ${inputtedStart} .jpg">`);
       makeApiCall(inputtedStart, inputtedAmount, inputtedEnd);
-      $('.photos').show();
-      $('.photo-start').html(`"<img src=./assets/images/${inputtedStart}.jpg>"`);
+      
     }
 
 

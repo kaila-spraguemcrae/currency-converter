@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
   <title>Currency Converter</title>
 </head>
 
 <body>
   <div class="jumbotron">
-    <h1>Currency Converter</h1>
+    <h1><strong>C</strong>urrency <strong>C</strong>onverter</h1>
   </div>
   <div class="container">
     <form id="user-input">
@@ -70,7 +72,7 @@
               <option value="ZAR">ZAR (South African Rand)</option>
             </select>
             <div class="amount">
-              <label for="amount">Amount:</label>
+              <label for="amount">Starting Amount:</label>
               <input id="amount" class="form-control" type="text">
             </div>
           </div>
@@ -134,22 +136,27 @@
               <option value="UYU">UYU (Uruguayan Peso)</option>
               <option value="ZAR">ZAR (South African Rand)</option>
             </select>
-            <div id="results"></div>
+            <div class="results">
+              <p>Ending Amount:</p>
+              <div class="card">
+                <div id="results"></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </form>
-    <div class="photos">
+    <!-- <div class="photos">
       <div class="row">
         <div class="card">
           <div class="photo-start"></div>
           <div class="arrow">
-            <img src= "/assets/images/arrow.png" alt="">
+            <img src= "./assets/images/arrow.png" alt="">
           </div>
           <div class="photo-end"></div>
         </div>
       </div>
-    </div>
+    </div> -->
     <div id="errors"></div>
   </div><!--container-->
 </body>
