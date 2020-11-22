@@ -10,13 +10,9 @@ function getElements(response, inputtedStart, inputtedAmount, inputtedEnd) {
     let conversionRateEnd = parseFloat(response.conversion_rates[inputtedEnd]);
     let conversionRateStart = parseFloat(response.conversion_rates[inputtedStart]);
     let newAmount = convert(conversionRateStart, inputtedAmount,conversionRateEnd);
-    console.log(conversionRateEnd);
-    console.log(conversionRateStart);
     $('#results').html(`${newAmount}`);
-    console.log(newAmount);
   } else {
     $('#errors').html(`There was an error: ${response.message}`);
-    console.log(response.message);
   }
 }
 
