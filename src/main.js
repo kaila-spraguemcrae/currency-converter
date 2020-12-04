@@ -6,7 +6,12 @@ import convert from './js/currency-conversion.js';
 import ExchangeRate from './js/call-exchange-rate.js';
 
 function getElements(response, inputtedStart, inputtedAmount, inputtedEnd) {
+  
   if (response.conversion_rates){
+    inputtedStart = "XXX";
+    if (isNaN(response.conversion_rates[inputtedStart])){
+      $('#errors').html('There was an error: this currency is not available');
+    } 
     let conversionRateEnd = parseFloat(response.conversion_rates[inputtedEnd]);
     let conversionRateStart = parseFloat(response.conversion_rates[inputtedStart]);
     let newAmount = convert(conversionRateStart, inputtedAmount,conversionRateEnd);
