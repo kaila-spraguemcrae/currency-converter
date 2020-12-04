@@ -8,7 +8,6 @@ import ExchangeRate from './js/call-exchange-rate.js';
 function getElements(response, inputtedStart, inputtedAmount, inputtedEnd) {
   
   if (response.conversion_rates){
-    inputtedStart = "XXX";
     if (isNaN(response.conversion_rates[inputtedStart])){
       $('#errors').html('There was an error: this currency is not available');
     } 
